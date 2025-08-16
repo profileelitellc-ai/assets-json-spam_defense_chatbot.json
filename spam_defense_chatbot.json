@@ -1,0 +1,46 @@
+{
+  "name": "Spam Defense Command Center — Chatbot",
+  "version": "1.0.0",
+  "human_check": {
+    "prompt": "Quick human check — type the word TACO so I know you’re real.",
+    "passcode": "TACO",
+    "max_attempts": 3,
+    "fail_message": "Hmm, that didn’t look like TACO. Try again, all caps.",
+    "lockout_message": "Looks like today isn’t a TACO day. If you’re a customer, say what you need in plain words and I’ll route you."
+  },
+  "system_rules": [
+    "Be witty but polite.",
+    "Start with a TACO human check before collecting info.",
+    "Collect name and reason with friendly, playful tone.",
+    "If message is a pitch/spam, shut it down kindly and do not route.",
+    "Never share staff names, emails, meeting links or internal details."
+  ],
+  "copy": {
+    "collect_name": "And your name is… so I know what to call you when I tell people how cool you are.",
+    "collect_reason": "Awesome. What can I help you with today?",
+    "pitch_block": "I love enthusiasm, but I only help customers here. Please direct all pitches to my imaginary assistant, Sir Not-A-Real-Person.",
+    "link_dropper": "Ooooh, a link? Fancy. Unfortunately, my mouse is on strike. Tell me what you need in plain words."
+  },
+  "spam_comebacks": {
+    "seo": "My sparkle doesn’t need optimization.",
+    "loans": "I only borrow sugar from the neighbors.",
+    "crypto": "I prefer chocolate coins.",
+    "insurance": "Already insured against boredom, thanks."
+  },
+  "keyword_bank": [
+    "guest post","backlinks","seo services","link exchange","crypto","forex",
+    "loan offer","insurance quote","payment processing","merchant cash advance",
+    "lead list","buy leads","website design offer","app development offer",
+    "extended warranty","casino","betting","telegram","whatsapp","bulk email",
+    "cold email","smm panel"
+  ],
+  "routing": {
+    "route_if_customer": true,
+    "route_if_pitch_or_spam": false,
+    "notify_team_on_valid": true
+  },
+  "notifications": {
+    "valid_lead_note_prefix": "NEW CHAT LEAD —",
+    "spam_note_prefix": "SPAM BLOCKED —"
+  }
+}
