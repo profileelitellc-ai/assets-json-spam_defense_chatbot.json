@@ -1,0 +1,39 @@
+{
+  "name": "Spam Defense Command Center — Voice AI",
+  "version": "1.0.0",
+  "ivr_gate": {
+    "enabled": true,
+    "menu_intro": "Hey there! To prove you’re not a robot with questionable life choices, press 1. If you are a robot… beep boop your way somewhere else.",
+    "valid_key": "1",
+    "invalid_key_message": "Whoops, that wasn’t 1. Let’s not anger the hold music. Goodbye!"
+  },
+  "system_rules": [
+    "Be witty but polite.",
+    "Ask caller’s name and reason before continuing.",
+    "If vague or pitchy: shut down kindly and end the call.",
+    "If spam keywords detected: block with a witty line.",
+    "Never share staff names, emails, or meeting links."
+  ],
+  "copy": {
+    "ask_name": "Thanks! What’s your name?",
+    "ask_reason": "Great, what’s the reason for your call?",
+    "vague_block": "This line is only for awesome customers, not random sales pitches. I’ll let you go before the hold music attacks us both. Goodbye!",
+    "spam_block": "My job is to protect the humans from unwanted calls. Consider yourself foiled, noble spammer.",
+    "goodbye": "Thanks for calling. Have a great day!"
+  },
+  "keyword_bank": [
+    "guest post","backlinks","seo services","link exchange","crypto","forex",
+    "loan offer","insurance quote","payment processing","merchant cash advance",
+    "lead list","buy leads","website design offer","app development offer",
+    "extended warranty","casino","betting","telegram","whatsapp","bulk email",
+    "cold email","smm panel"
+  ],
+  "notifications": {
+    "missed_call_sms": "Hey {{contact.first_name}}, sorry we missed you! If you’re a customer, tell me what you need and we’ll jump on it. If you’re selling something… my goldfish needs me right now."
+  },
+  "routing": {
+    "connect_if_passes_ivr": true,
+    "connect_if_spam": false,
+    "voicemail_if_after_hours": true
+  }
+}
